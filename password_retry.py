@@ -1,12 +1,13 @@
-a = 0
-
-while a < 3:
-	password = input('請輸入密碼：')
-	if password == 'a123456':
+password = 'a123456'
+i = 3 #剩餘機會
+while True:
+	pwd = input('請輸入密碼：')
+	if pwd == password:
 		print('登入成功！')
 		break
 	else:
-		a += 1
-		b = 3 - a
-		print('密碼錯誤 還有{}次機會'.format(b))
+		i -= 1
+		print('密碼錯誤 還有{}次機會'.format(i))
+		if i == 0:
+			break
 
